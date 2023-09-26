@@ -65,6 +65,15 @@ rna_codons = {
     "GGG": "G",
 }
 
+genotypePairsOdds = {
+    "AAAA": (1.0, 0.0, 0.0),
+    "AAAa": (0.5, 0.5, 0.0),
+    "AAaa": (0.0, 1.0, 0.0),
+    "AaAa": (0.25, 0.5, 0.25),
+    "Aaaa": (0.0, 0.5, 0.5),
+    "aaaa": (0.0, 0.0, 1.0),
+}
+
 
 def translate_to_prot(rna):
     prot = ""
