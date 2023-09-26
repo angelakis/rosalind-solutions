@@ -65,6 +65,7 @@ rna_codons = {
     "GGG": "G",
 }
 
+
 def translate_to_prot(rna):
     prot = ""
     for i in range(0, len(rna), 3):
@@ -78,3 +79,33 @@ def translate_to_prot(rna):
 def transcribe_to_rna(dna):
     rna = dna.replace("T", "U")
     return(rna)
+
+
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.parent = None
+        self.children = []
+        self.visited = False
+
+def parse_newick(newick_str, treeType=TreeNode):
+    stack = [treeType('')]
+    current_node = None
+    for char in newick_str:
+        if char == '(':
+            if current_node:
+                stack.append(current_node)
+            current_node = treeType('')
+        elif char == ')':
+            parent = stack.pop()
+            current_node.parent = parent
+            parent.children.append(current_node)
+            current_node = parent
+        elif char == ',':
+            parent = stack[-1]
+            current_node.parent = parent
+            parent.children.append(current_node)
+            current_node = treeType('')
+        else:
+            current_node.val += char
+    return current_node
