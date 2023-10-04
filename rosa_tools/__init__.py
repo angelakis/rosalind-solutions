@@ -110,9 +110,53 @@ def translate_to_prot(rna):
     return(prot)
 
 
+def find_all_prots_of_reading_frame(rna):
+    prots = []
+    i = 0
+    while i < len(rna)-3:
+        while rna_codons[rna[i:i+3]] != "M":
+            i += 3
+            if i >= len(rna)-3:
+                return(add_subset_prots(prots))
+        prot = "M"
+        i += 3
+        subsetProts = []
+        while rna_codons[rna[i:i+3]] != "Stop":
+            prot += rna_codons[rna[i:i+3]]
+            i += 3
+            if i >= len(rna)-3:
+                return(add_subset_prots(prots))
+        prots.append(prot)
+    return(add_subset_prots(prots))
+
+
+def add_subset_prots(prots):
+    allProts = list(prots)
+    for p in prots:
+        if len(p) == 1:
+            continue
+        for i in range(1, len(p)):
+            if p[i] == "M":
+                allProts.append(p[i:])
+    return(allProts)
+
+
+
 def transcribe_to_rna(dna):
     rna = dna.replace("T", "U")
     return(rna)
+
+
+def reverse_and_complement(dna):
+    complements = {
+        "A": "T",
+        "T": "A",
+        "C": "G",
+        "G": "C",
+    }
+    transTable = str.maketrans(complements)
+    complementDna = dna[::-1].translate(transTable)
+    return(complementDna)
 
 
 class TreeNode:
