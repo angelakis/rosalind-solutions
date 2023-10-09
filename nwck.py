@@ -29,7 +29,7 @@ def calculate_distances(trees, ends):
 if __name__ == "__main__":
     trees = []
     ends = []
-    with open("rosalind_nwck.txt") as f:
+    with open("inputfiles/rosalind_nwck.txt") as f:
         for line in f:
             if line.strip() == "":
                 continue

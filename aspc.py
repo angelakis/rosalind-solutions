@@ -1,7 +1,7 @@
 import math
 
 if __name__ == "__main__":
-    with open("rosalind_aspc.txt") as f:
+    with open("inputfiles/rosalind_aspc.txt") as f:
         n, m = [int(x) for x in f.readline().strip().split()]
     ss = 0
     for i in range(m, n+1):

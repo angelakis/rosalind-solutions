@@ -75,6 +75,6 @@ def translate_to_prot(rna):
     return(prot)
 
 if __name__ == "__main__":
-    with open("rosalind_prot.txt") as f:
+    with open("inputfiles/rosalind_prot.txt") as f:
         rna = f.readline().strip()
     print(translate_to_prot(rna))

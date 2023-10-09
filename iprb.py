@@ -9,6 +9,6 @@ def calculate_dominant_phenotype(k, m, n):
     return perc
 
 if __name__ == "__main__":
-    with open("rosalind_iprb.txt") as f:
+    with open("inputfiles/rosalind_iprb.txt") as f:
         k, m, n = [int(x) for x in f.readline().strip().split()]
     print(round(calculate_dominant_phenotype(k, m, n), 5))

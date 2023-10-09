@@ -15,7 +15,7 @@ def find_consensus_and_matrix(fasta_dna_strings):
 
 if __name__ == "__main__":
     fasta_dna_strings = {}
-    with open("rosalind_cons.txt") as f:
+    with open("inputfiles/rosalind_cons.txt") as f:
         for line in f.readlines():
             if line[0] == ">":
                 key = line.split()[0][1:]

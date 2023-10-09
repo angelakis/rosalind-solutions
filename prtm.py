@@ -7,6 +7,6 @@ def calculate_prot_weight(prot):
     return(weight)
 
 if __name__ == "__main__":
-    with open("rosalind_prtm.txt") as f:
+    with open("inputfiles/rosalind_prtm.txt") as f:
         prot = f.readline().strip()
     print(calculate_prot_weight(prot))

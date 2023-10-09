@@ -12,6 +12,6 @@ def calculate_prob_for_common_chromosomes(n):
     return probs
 
 if __name__ == "__main__":
-    with open("rosalind_indc.txt") as f:
+    with open("inputfiles/rosalind_indc.txt") as f:
         n = int(f.readline().strip())
     print(" ".join(map(str, calculate_prob_for_common_chromosomes(2*n))))

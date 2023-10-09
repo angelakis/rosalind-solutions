@@ -10,7 +10,7 @@ def find_highest_gc(fasta_dna_strings):
 
 if __name__ == "__main__":
     fasta_dna_strings = {}
-    with open("rosalind_gc.txt") as f:
+    with open("inputfiles/rosalind_gc.txt") as f:
         for line in f.readlines():
             if line[0] == ">":
                 key = line.split()[0][1:]

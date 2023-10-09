@@ -15,7 +15,7 @@ def calculate_distance_matrix(fasta_dna_strings):
 
 if __name__ == "__main__":
     fasta_dna_strings = {}
-    with open("rosalind_pdst.txt") as f:
+    with open("inputfiles/rosalind_pdst.txt") as f:
         for line in f.readlines():
             if line[0] == ">":
                 key = line.split()[0][1:]

@@ -78,7 +78,7 @@ def calculate_chance_for_AaBb(k, n):
     return prob_sum
 
 if __name__ == "__main__":
-    with open("rosalind_lia.txt") as f:
+    with open("inputfiles/rosalind_lia.txt") as f:
         k, n = [int(x) for x in f.readline().strip().split()]
     breakpoint()
     print(calculate_chance_for_AaBb(k, n))

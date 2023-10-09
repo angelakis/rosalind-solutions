@@ -1,5 +1,5 @@
 if __name__ == "__main__":
-    with open("rosalind_seto.txt") as f:
+    with open("inputfiles/rosalind_seto.txt") as f:
         n = int(f.readline().strip())
         setA  = eval(f.readline().strip())
         setB  = eval(f.readline().strip())

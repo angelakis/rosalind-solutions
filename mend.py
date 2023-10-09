@@ -32,7 +32,7 @@ def calculate_probs(tree_newick):
 
 
 if __name__ == "__main__":
-    with open("rosalind_mend.txt") as f:
+    with open("inputfiles/rosalind_mend.txt") as f:
         tree = f.readline().strip()[:-1]
     probs = calculate_probs(tree)
     print(f"{probs['AA']} {probs['Aa']} {probs['aa']}")

@@ -9,7 +9,7 @@ def remove_introns(dna, intron_sequences):
 
 if __name__ == "__main__":
     fasta_dna_strings = {}
-    with open("rosalind_splc.txt") as f:
+    with open("inputfiles/rosalind_splc.txt") as f:
         for line in f.readlines():
             if line[0] == ">":
                 key = line.split()[0][1:]

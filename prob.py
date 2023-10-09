@@ -16,7 +16,7 @@ def logs_of_prob_gc(dna, gcProbs):
     return(probs)
 
 if __name__ == "__main__":
-    with open("rosalind_prob.txt") as f:
+    with open("inputfiles/rosalind_prob.txt") as f:
         dna = f.readline().strip()
         gcProbs = list(map(float, f.readline().split()))
     print(" ".join(map(str, logs_of_prob_gc(dna, gcProbs))))

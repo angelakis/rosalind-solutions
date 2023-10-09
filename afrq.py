@@ -15,6 +15,6 @@ def freq_of_carriers(homozRecFreqs):
     return(freqs)
 
 if __name__ == "__main__":
-    with open("rosalind_afrq.txt") as f:
+    with open("inputfiles/rosalind_afrq.txt") as f:
         homozRecFreqs = list(map(float, f.readline().split()))
     print(" ".join(map(str, freq_of_carriers(homozRecFreqs))))

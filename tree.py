@@ -25,7 +25,7 @@ def find_islands(undir_graph):
 
 if __name__ == "__main__":
     edges = []
-    with open("rosalind_tree.txt") as f:
+    with open("inputfiles/rosalind_tree.txt") as f:
         lines = f.readlines()
         n = int(lines[0].strip())
         for l in lines[1:]:

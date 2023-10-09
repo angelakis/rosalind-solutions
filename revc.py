@@ -10,6 +10,6 @@ def reverse_and_complement(dna):
     return(complementDna)
 
 if __name__ == "__main__":
-    with open("rosalind_revc.txt") as f:
+    with open("inputfiles/rosalind_revc.txt") as f:
         dna = f.readline().strip()
     print(reverse_and_complement(dna))

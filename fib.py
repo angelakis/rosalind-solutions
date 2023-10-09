@@ -10,6 +10,6 @@ def modified_fib(n, k):
     return(fib_values[n])
 
 if __name__ == "__main__":
-    with open("rosalind_fib.txt") as f:
+    with open("inputfiles/rosalind_fib.txt") as f:
         n, k = [int(x) for x in f.readline().strip().split()]
     print(modified_fib(n, k))

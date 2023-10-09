@@ -6,7 +6,7 @@ def calculate_hamm_dist(dna1, dna2):
     return(hamm)
 
 if __name__ == "__main__":
-    with open("rosalind_hamm.txt") as f:
+    with open("inputfiles/rosalind_hamm.txt") as f:
         dna1 = f.readline().strip()
         dna2 = f.readline().strip()
     print(calculate_hamm_dist(dna1, dna2))

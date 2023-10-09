@@ -11,6 +11,6 @@ def modified_fib_deaths(n, m):
     return(fib_values[n])
 
 if __name__ == "__main__":
-    with open("rosalind_fibd.txt") as f:
+    with open("inputfiles/rosalind_fibd.txt") as f:
         n, m = [int(x) for x in f.readline().strip().split()]
     print(modified_fib_deaths(n, m))

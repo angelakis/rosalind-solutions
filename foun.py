@@ -35,7 +35,7 @@ def calculate_rec_annihilation(pop, gens, recAlleles):
     return(probs)
 
 if __name__ == "__main__":
-    with open("rosalind_foun.txt") as f:
+    with open("inputfiles/rosalind_foun.txt") as f:
         n, m = [int(x) for x in f.readline().strip().split()]
         recAlleles = [int(x) for x in f.readline().strip().split()]
     probs = calculate_rec_annihilation(n, m, recAlleles)

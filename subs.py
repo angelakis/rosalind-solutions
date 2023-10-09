@@ -6,7 +6,7 @@ def find_substr_locs(dna, dnaSub):
     return(locs)
 
 if __name__ == "__main__":
-    with open("rosalind_subs.txt") as f:
+    with open("inputfiles/rosalind_subs.txt") as f:
         dna = f.readline().strip()
         dnaSub = f.readline().strip()
     locs = find_substr_locs(dna, dnaSub)

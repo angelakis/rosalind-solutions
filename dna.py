@@ -6,7 +6,7 @@ def count_dna_bases(dna):
     return(adenines, cytosines, guanines, thymines)
 
 if __name__ == "__main__":
-    with open("rosalind_dna.txt") as f:
+    with open("inputfiles/rosalind_dna.txt") as f:
         dna = f.readline().strip()
     adenines, cytosines, guanines, thymines = count_dna_bases(dna)
     print(f"{adenines} {cytosines} {guanines} {thymines}")

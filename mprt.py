@@ -32,7 +32,7 @@ def get_nGlycosylation_locations(protSeq):
     return(locs)
 
 if __name__ == "__main__":
-    with open("rosalind_mprt.txt") as f:
+    with open("inputfiles/rosalind_mprt.txt") as f:
         prots = [prot.strip() for prot in f.readlines()]
     protSequences = get_prot_sequences(prots)
     for i, protSeq in enumerate(protSequences):

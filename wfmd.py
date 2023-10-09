@@ -26,6 +26,6 @@ def calculate_genetic_drift(pop, domAlleles, gens, recAlleleMin):
     return(prob)
 
 if __name__ == "__main__":
-    with open("rosalind_wfmd.txt") as f:
+    with open("inputfiles/rosalind_wfmd.txt") as f:
         n, m, g, k = [int(x) for x in f.readline().strip().split()]
     print(round(calculate_genetic_drift(n, m, g, k), 3))

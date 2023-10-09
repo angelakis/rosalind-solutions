@@ -9,6 +9,6 @@ if __name__ == "__main__":
     must be the same as f(a) for the females so q = f(a), so we are looking for 2pq and of course
     p + q = 1.
     """
-    with open("rosalind_sexl.txt") as f:
+    with open("inputfiles/rosalind_sexl.txt") as f:
         recMales = list(map(Decimal, f.readline().split()))
     print(" ".join(map(str, [2 * q * (1-q) for q in recMales])))

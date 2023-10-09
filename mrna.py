@@ -79,6 +79,6 @@ def count_possible_rna_strings(protein):
     return(rna_strings * reverse_codon_dict["Stop"] % (10**6))
 
 if __name__ == "__main__":
-    with open("rosalind_mrna.txt") as f:
+    with open("inputfiles/rosalind_mrna.txt") as f:
         protein = f.readline().strip()
     print(count_possible_rna_strings(protein))

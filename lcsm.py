@@ -32,7 +32,7 @@ def longest_common_substrings(a, b):
 
 if __name__ == "__main__":
     fasta_dna_strings = {}
-    with open("rosalind_lcsm.txt") as f:
+    with open("inputfiles/rosalind_lcsm.txt") as f:
         for line in f.readlines():
             if line[0] == ">":
                 key = line.split()[0][1:]
