@@ -159,6 +159,10 @@ def reverse_and_complement(dna):
     return(complementDna)
 
 
+def is_own_reverse_complement(dna):
+    return(dna == reverse_and_complement(dna))
+
+
 class TreeNode:
     def __init__(self, val):
         self.val = val
