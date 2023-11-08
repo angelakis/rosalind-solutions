@@ -1,9 +1,5 @@
-def calculate_hamm_dist(dna1, dna2):
-    hamm = 0
-    for i in range(min(len(dna1), len(dna2))):
-        if dna1[i] != dna2[i]:
-            hamm += 1
-    return(hamm)
+from rosa_tools import calculate_hamm_dist
+
 
 if __name__ == "__main__":
     with open("inputfiles/rosalind_hamm.txt") as f:

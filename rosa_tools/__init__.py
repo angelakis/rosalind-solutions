@@ -191,3 +191,10 @@ def parse_newick(newick_str, treeType=TreeNode):
         else:
             current_node.val += char
     return current_node
+
+def calculate_hamm_dist(dna1, dna2):
+    hamm = 0
+    for i in range(min(len(dna1), len(dna2))):
+        if dna1[i] != dna2[i]:
+            hamm += 1
+    return(hamm)
